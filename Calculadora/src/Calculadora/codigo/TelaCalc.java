@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package Calculadora.codigo;
+import java.awt.event.KeyEvent;
 import javax.swing.JOptionPane;
 
 /**
@@ -59,8 +60,21 @@ public class TelaCalc extends javax.swing.JFrame {
         jButtonRaiz = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                formKeyTyped(evt);
+            }
+        });
 
         jTextFieldResultado.setEditable(false);
+        jTextFieldResultado.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jTextFieldResultadoKeyPressed(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTextFieldResultadoKeyTyped(evt);
+            }
+        });
 
         jButton02.setText("2");
         jButton02.addActionListener(new java.awt.event.ActionListener() {
@@ -309,6 +323,7 @@ public class TelaCalc extends javax.swing.JFrame {
         ContCaracAtual++;
         ContCaracTotal++;
         }
+        jTextFieldResultado.requestFocus();
     }//GEN-LAST:event_jButton02ActionPerformed
 
     private void jButton01ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton01ActionPerformed
@@ -319,6 +334,7 @@ public class TelaCalc extends javax.swing.JFrame {
         ContCaracAtual++;
         ContCaracTotal++;
         }
+        jTextFieldResultado.requestFocus();
     }//GEN-LAST:event_jButton01ActionPerformed
 
     private void jButton00ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton00ActionPerformed
@@ -328,6 +344,7 @@ public class TelaCalc extends javax.swing.JFrame {
         ContCaracAtual++;
         ContCaracTotal++;
         }
+        jTextFieldResultado.requestFocus();
     }//GEN-LAST:event_jButton00ActionPerformed
 
     private void jButtonPontoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPontoActionPerformed
@@ -338,6 +355,7 @@ public class TelaCalc extends javax.swing.JFrame {
             ponto = true;
             ContCaracAtual++;
         }
+        jTextFieldResultado.requestFocus();
     }//GEN-LAST:event_jButtonPontoActionPerformed
 
     private void jButton03ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton03ActionPerformed
@@ -348,6 +366,7 @@ public class TelaCalc extends javax.swing.JFrame {
         ContCaracAtual++;
         ContCaracTotal++;
         }
+        jTextFieldResultado.requestFocus();
     }//GEN-LAST:event_jButton03ActionPerformed
 
     private void jButton04ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton04ActionPerformed
@@ -358,6 +377,7 @@ public class TelaCalc extends javax.swing.JFrame {
         ContCaracAtual++;
         ContCaracTotal++;
         }
+        jTextFieldResultado.requestFocus();
     }//GEN-LAST:event_jButton04ActionPerformed
 
     private void jButton05ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton05ActionPerformed
@@ -368,6 +388,7 @@ public class TelaCalc extends javax.swing.JFrame {
         ContCaracAtual++;
         ContCaracTotal++;
         }
+       jTextFieldResultado.requestFocus();
     }//GEN-LAST:event_jButton05ActionPerformed
 
     private void jButton06ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton06ActionPerformed
@@ -378,6 +399,7 @@ public class TelaCalc extends javax.swing.JFrame {
         ContCaracAtual++;
         ContCaracTotal++;
         }
+        jTextFieldResultado.requestFocus();
     }//GEN-LAST:event_jButton06ActionPerformed
 
     private void jButton07ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton07ActionPerformed
@@ -388,6 +410,7 @@ public class TelaCalc extends javax.swing.JFrame {
         ContCaracAtual++;
         ContCaracTotal++;
         }
+        jTextFieldResultado.requestFocus();
     }//GEN-LAST:event_jButton07ActionPerformed
 
     private void jButton08ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton08ActionPerformed
@@ -398,6 +421,7 @@ public class TelaCalc extends javax.swing.JFrame {
         ContCaracAtual++;
         ContCaracTotal++;
         }
+        jTextFieldResultado.requestFocus();
     }//GEN-LAST:event_jButton08ActionPerformed
 
     private void jButton09ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton09ActionPerformed
@@ -408,6 +432,7 @@ public class TelaCalc extends javax.swing.JFrame {
         ContCaracAtual++;
         ContCaracTotal++;
         }
+        jTextFieldResultado.requestFocus();
     }//GEN-LAST:event_jButton09ActionPerformed
 
     private void jButtonSomaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSomaActionPerformed
@@ -425,6 +450,7 @@ public class TelaCalc extends javax.swing.JFrame {
                     ContCaracTotal++;
                 }
             }
+            jTextFieldResultado.requestFocus();
         
     }//GEN-LAST:event_jButtonSomaActionPerformed
 
@@ -449,6 +475,7 @@ public class TelaCalc extends javax.swing.JFrame {
                 ContCaracTotal++;
             }
         }
+        jTextFieldResultado.requestFocus();
     }//GEN-LAST:event_jButtonMenosActionPerformed
 
     private void jButtonResultadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonResultadoActionPerformed
@@ -502,7 +529,8 @@ public class TelaCalc extends javax.swing.JFrame {
             ponto = true;
             }else{
                 JOptionPane.showMessageDialog(null, "Revise a formatação");
-        }   
+            }
+        jTextFieldResultado.requestFocus();
     }//GEN-LAST:event_jButtonResultadoActionPerformed
     
     private void jButtonVezesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonVezesActionPerformed
@@ -516,6 +544,7 @@ public class TelaCalc extends javax.swing.JFrame {
             ponto = false;
             ContCaracAtual = 0;
             ContCaracTotal++;
+            jTextFieldResultado.requestFocus();
         }
     }//GEN-LAST:event_jButtonVezesActionPerformed
 
@@ -531,6 +560,7 @@ public class TelaCalc extends javax.swing.JFrame {
         Atual = "";
         ContCaracAtual = 0;
         ContCaracTotal = 0;
+        jTextFieldResultado.requestFocus();
     }//GEN-LAST:event_jButtonClearActionPerformed
 
     private void jButtonApagarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonApagarActionPerformed
@@ -584,6 +614,7 @@ public class TelaCalc extends javax.swing.JFrame {
                 }
             
         }
+        jTextFieldResultado.requestFocus();
     }//GEN-LAST:event_jButtonApagarActionPerformed
 
     private void jButtonDiv1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonDiv1ActionPerformed
@@ -597,6 +628,7 @@ public class TelaCalc extends javax.swing.JFrame {
             ponto = false;
             ContCaracAtual = 0;
             ContCaracTotal++;
+            jTextFieldResultado.requestFocus();
         }
     }//GEN-LAST:event_jButtonDiv1ActionPerformed
 
@@ -611,6 +643,7 @@ public class TelaCalc extends javax.swing.JFrame {
             ponto = false;
             ContCaracAtual = 0;
             ContCaracTotal++;
+            jTextFieldResultado.requestFocus();
         }
     }//GEN-LAST:event_jButtonPotenciaActionPerformed
 
@@ -625,8 +658,85 @@ public class TelaCalc extends javax.swing.JFrame {
             ponto = false;
             ContCaracAtual = 0;
             ContCaracTotal++;
+            jTextFieldResultado.requestFocus();
         }
     }//GEN-LAST:event_jButtonRaizActionPerformed
+
+    private void formKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_formKeyTyped
+           
+    }//GEN-LAST:event_formKeyTyped
+
+    private void jTextFieldResultadoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextFieldResultadoKeyTyped
+        char e = evt.getKeyChar();
+        switch(e){
+            case '0' :
+                jButton00.doClick();
+                break;
+            case '1' :
+                jButton01.doClick();
+                break;
+            case '2' :
+                jButton02.doClick();
+                break;
+            case '3' :
+                jButton03.doClick();
+                break;
+            case '4' :
+                jButton04.doClick();
+                break;
+            case '5' :
+                jButton05.doClick();
+                break;
+            case '6' :
+                jButton06.doClick();
+                break;
+            case '7' :
+                jButton07.doClick();
+                break;
+            case '8' :
+                jButton08.doClick();
+                break;
+            case '9' :
+                jButton09.doClick();
+                break;
+            case '+' :
+                jButtonSoma.doClick();
+                break;
+            case '-' :
+                jButtonMenos.doClick();
+                break;
+            case 'x':
+                jButtonVezes.doClick();
+                break;
+            case '*' : 
+                jButtonVezes.doClick();
+                break;
+            case '/' :
+                jButtonDiv1.doClick();
+                break;
+            case '^':
+                jButtonPotencia.doClick();
+                break;
+            case ',' :
+                jButtonPonto.doClick();
+                break;
+            case '.' :
+                jButtonPonto.doClick();
+                break;
+        }
+    }//GEN-LAST:event_jTextFieldResultadoKeyTyped
+
+    private void jTextFieldResultadoKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextFieldResultadoKeyPressed
+        // TODO add your handling code here:
+        if(evt.getKeyCode() == KeyEvent.VK_BACK_SPACE){
+            jButtonApagar.doClick();
+        }else{
+            if(evt.getKeyCode() == KeyEvent.VK_ENTER){
+                jButtonResultado.doClick();
+            }
+        }
+        
+    }//GEN-LAST:event_jTextFieldResultadoKeyPressed
 
     /**
      * @param args the command line arguments
