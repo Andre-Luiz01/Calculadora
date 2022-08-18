@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <Form version="1.8" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <NonVisualComponents>
+    <Component class="javax.swing.JButton" name="jButtonResultado2">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="="/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonResultado2ActionPerformed"/>
+      </Events>
+    </Component>
+  </NonVisualComponents>
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
   </Properties>
@@ -34,36 +44,17 @@
                           <Component id="jButton04" min="-2" pref="53" max="-2" attributes="0"/>
                           <Component id="jButton01" min="-2" pref="53" max="-2" attributes="0"/>
                           <Component id="jButton07" min="-2" pref="53" max="-2" attributes="0"/>
-                          <Component id="jButtonPonto" min="-2" pref="53" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <Component id="jButton00" min="-2" pref="53" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jButtonClear" min="-2" pref="53" max="-2" attributes="0"/>
+                              <Component id="jButtonPonto" min="-2" pref="53" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="jButtonPotencia" min="-2" pref="53" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="jButtonRaiz" min="-2" pref="53" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" attributes="0">
-                              <Component id="jButton02" min="-2" pref="53" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jButton03" min="-2" pref="53" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jButtonApagar" min="-2" pref="53" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jButtonResultado" min="-2" pref="53" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" attributes="0">
-                              <Component id="jButton05" min="-2" pref="53" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jButton06" min="-2" pref="53" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jButtonSoma" min="-2" pref="53" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jButtonVezes" min="-2" pref="53" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <Component id="jButton08" min="-2" pref="53" max="-2" attributes="0"/>
@@ -73,15 +64,41 @@
                               <Component id="jButtonMenos" min="-2" pref="53" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="jButtonDiv1" min="-2" pref="53" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jButtonFechaParenteses" min="-2" pref="53" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="jButton02" min="-2" pref="53" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="jButton03" min="-2" pref="53" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="jButtonClear" min="-2" pref="53" max="-2" attributes="0"/>
+                                  <EmptySpace max="32767" attributes="0"/>
+                                  <Component id="jButtonApagar" min="-2" pref="53" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="jButtonResultado" min="-2" pref="53" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="jButton05" min="-2" pref="53" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="jButton06" min="-2" pref="53" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="jButtonSoma" min="-2" pref="53" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="jButtonVezes" min="-2" pref="53" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="jButtonAbreParenteses" min="-2" pref="53" max="-2" attributes="0"/>
+                              </Group>
                           </Group>
                       </Group>
                   </Group>
-                  <Group type="102" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
                       <Component id="jTextFieldResultado" min="-2" pref="274" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace pref="92" max="32767" attributes="0"/>
+              <EmptySpace pref="36" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -97,6 +114,7 @@
                   <Component id="jButtonApagar" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
                   <Component id="jButton01" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
                   <Component id="jButtonResultado" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
+                  <Component id="jButtonClear" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
@@ -105,6 +123,7 @@
                   <Component id="jButton06" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
                   <Component id="jButtonSoma" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
                   <Component id="jButtonVezes" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
+                  <Component id="jButtonAbreParenteses" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
@@ -113,12 +132,12 @@
                   <Component id="jButton09" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
                   <Component id="jButtonMenos" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
                   <Component id="jButtonDiv1" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
+                  <Component id="jButtonFechaParenteses" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jButton00" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
                   <Component id="jButtonPonto" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="jButtonClear" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
                   <Component id="jButtonPotencia" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
                   <Component id="jButtonRaiz" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
               </Group>
@@ -295,6 +314,22 @@
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonRaizActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="jButtonAbreParenteses">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="("/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonAbreParentesesActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="jButtonFechaParenteses">
+      <Properties>
+        <Property name="text" type="java.lang.String" value=")"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonFechaParentesesActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>

@@ -37,6 +37,7 @@ public class TelaCalc extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jButtonResultado2 = new javax.swing.JButton();
         jTextFieldResultado = new javax.swing.JTextField();
         jButton02 = new javax.swing.JButton();
         jButton01 = new javax.swing.JButton();
@@ -58,6 +59,15 @@ public class TelaCalc extends javax.swing.JFrame {
         jButtonDiv1 = new javax.swing.JButton();
         jButtonPotencia = new javax.swing.JButton();
         jButtonRaiz = new javax.swing.JButton();
+        jButtonAbreParenteses = new javax.swing.JButton();
+        jButtonFechaParenteses = new javax.swing.JButton();
+
+        jButtonResultado2.setText("=");
+        jButtonResultado2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonResultado2ActionPerformed(evt);
+            }
+        });
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         addKeyListener(new java.awt.event.KeyAdapter() {
@@ -216,6 +226,20 @@ public class TelaCalc extends javax.swing.JFrame {
                 }
             });
 
+            jButtonAbreParenteses.setText("(");
+            jButtonAbreParenteses.addActionListener(new java.awt.event.ActionListener() {
+                public void actionPerformed(java.awt.event.ActionEvent evt) {
+                    jButtonAbreParentesesActionPerformed(evt);
+                }
+            });
+
+            jButtonFechaParenteses.setText(")");
+            jButtonFechaParenteses.addActionListener(new java.awt.event.ActionListener() {
+                public void actionPerformed(java.awt.event.ActionEvent evt) {
+                    jButtonFechaParentesesActionPerformed(evt);
+                }
+            });
+
             javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
             getContentPane().setLayout(layout);
             layout.setHorizontalGroup(
@@ -227,34 +251,17 @@ public class TelaCalc extends javax.swing.JFrame {
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                 .addComponent(jButton04, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(jButton01, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jButton07, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jButtonPonto, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(jButton07, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addGroup(layout.createSequentialGroup()
                                     .addComponent(jButton00, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jButtonClear, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jButtonPonto, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                     .addComponent(jButtonPotencia, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                     .addComponent(jButtonRaiz, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(layout.createSequentialGroup()
-                                    .addComponent(jButton02, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jButton03, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jButtonApagar, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jButtonResultado, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(layout.createSequentialGroup()
-                                    .addComponent(jButton05, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jButton06, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jButtonSoma, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jButtonVezes, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGroup(layout.createSequentialGroup()
                                     .addComponent(jButton08, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -262,11 +269,34 @@ public class TelaCalc extends javax.swing.JFrame {
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                     .addComponent(jButtonMenos, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jButtonDiv1, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                    .addComponent(jButtonDiv1, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(jButtonFechaParenteses, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                        .addComponent(jButton02, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jButton03, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jButtonClear, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jButtonApagar, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jButtonResultado, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                        .addComponent(jButton05, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jButton06, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jButtonSoma, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jButtonVezes, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jButtonAbreParenteses, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                         .addGroup(layout.createSequentialGroup()
                             .addGap(45, 45, 45)
                             .addComponent(jTextFieldResultado, javax.swing.GroupLayout.PREFERRED_SIZE, 274, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addContainerGap(92, Short.MAX_VALUE))
+                    .addContainerGap(36, Short.MAX_VALUE))
             );
             layout.setVerticalGroup(
                 layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -279,26 +309,28 @@ public class TelaCalc extends javax.swing.JFrame {
                         .addComponent(jButton03, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jButtonApagar, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jButton01, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jButtonResultado, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jButtonResultado, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jButtonClear, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jButton04, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jButton05, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jButton06, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jButtonSoma, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jButtonVezes, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jButtonVezes, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jButtonAbreParenteses, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jButton08, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jButton07, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jButton09, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jButtonMenos, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jButtonDiv1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jButtonDiv1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jButtonFechaParenteses, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jButton00, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jButtonPonto, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jButtonClear, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jButtonPotencia, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jButtonRaiz, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addContainerGap(52, Short.MAX_VALUE))
@@ -314,6 +346,10 @@ public class TelaCalc extends javax.swing.JFrame {
         }else{
             return(false);
         }  
+    }
+    
+    public String resolverParenteses(String expresao){
+        
     }
     private void jButton02ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton02ActionPerformed
         // TODO add your handling code here:
@@ -481,7 +517,7 @@ public class TelaCalc extends javax.swing.JFrame {
     private void jButtonResultadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonResultadoActionPerformed
         // TODO add your handling code here:
         resultado = 0;
-        if(!Atual.equals(".") && !Atual.equals("")){
+        if(!Atual.equals(".") && !Atual.equals("") && !Atual.equals("-.")){
             if(Atual.equals("-")){
                 Atual += "1";
             }
@@ -528,7 +564,11 @@ public class TelaCalc extends javax.swing.JFrame {
             jTextFieldResultado.setText(resultado + "");
             ponto = true;
             }else{
-                JOptionPane.showMessageDialog(null, "Revise a formatação");
+                if(jTextFieldResultado.getText().equals("")){
+                    //Caso não tenha nada escrito
+                }else{
+                    JOptionPane.showMessageDialog(null, "Revise a formatação");
+                }
             }
         jTextFieldResultado.requestFocus();
     }//GEN-LAST:event_jButtonResultadoActionPerformed
@@ -544,8 +584,8 @@ public class TelaCalc extends javax.swing.JFrame {
             ponto = false;
             ContCaracAtual = 0;
             ContCaracTotal++;
-            jTextFieldResultado.requestFocus();
         }
+        jTextFieldResultado.requestFocus();
     }//GEN-LAST:event_jButtonVezesActionPerformed
 
     private void jButtonClearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonClearActionPerformed
@@ -588,8 +628,18 @@ public class TelaCalc extends javax.swing.JFrame {
 
                     if(Atual.equals("")){
                         indice--;
-                        if(vetor[indice].equals("x") || vetor[indice].equals("d")){
+                        if(vetor[indice].equals("x") || vetor[indice].equals("d") || vetor[indice].equals("p") || vetor[indice].equals("r")){
                             vetor[indice] = "";
+                            if(indice>0){
+                                Atual = vetor[indice-1];
+                                char funsaoAtual[] = Atual.toCharArray();
+                                for(int i = 0; i < funsaoAtual.length-1; i++){
+                                    if(funsaoAtual[i] == '.'){
+                                        ponto = true;
+                                    }
+                                }
+                                
+                            }
                             Atual = "";
                         }else{
                             Atual = vetor[indice];
@@ -628,8 +678,8 @@ public class TelaCalc extends javax.swing.JFrame {
             ponto = false;
             ContCaracAtual = 0;
             ContCaracTotal++;
-            jTextFieldResultado.requestFocus();
         }
+        jTextFieldResultado.requestFocus();
     }//GEN-LAST:event_jButtonDiv1ActionPerformed
 
     private void jButtonPotenciaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPotenciaActionPerformed
@@ -643,12 +693,13 @@ public class TelaCalc extends javax.swing.JFrame {
             ponto = false;
             ContCaracAtual = 0;
             ContCaracTotal++;
-            jTextFieldResultado.requestFocus();
         }
+        jTextFieldResultado.requestFocus();
     }//GEN-LAST:event_jButtonPotenciaActionPerformed
 
     private void jButtonRaizActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRaizActionPerformed
         // TODO add your handling code here:
+        if(!conferencia()) jButton02.doClick();
         if(conferencia()){
             vetor[indice] = Atual;
             vetor[indice+1] = "r";
@@ -658,8 +709,8 @@ public class TelaCalc extends javax.swing.JFrame {
             ponto = false;
             ContCaracAtual = 0;
             ContCaracTotal++;
-            jTextFieldResultado.requestFocus();
         }
+        jTextFieldResultado.requestFocus();
     }//GEN-LAST:event_jButtonRaizActionPerformed
 
     private void formKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_formKeyTyped
@@ -723,6 +774,9 @@ public class TelaCalc extends javax.swing.JFrame {
             case '.' :
                 jButtonPonto.doClick();
                 break;
+            case 'r':
+                jButtonRaiz.doClick();
+                break;
         }
     }//GEN-LAST:event_jTextFieldResultadoKeyTyped
 
@@ -733,10 +787,26 @@ public class TelaCalc extends javax.swing.JFrame {
         }else{
             if(evt.getKeyCode() == KeyEvent.VK_ENTER){
                 jButtonResultado.doClick();
+            }else{
+                if(evt.getKeyCode() == KeyEvent.VK_ESCAPE){
+                    jButtonClear.doClick();
+                }
             }
         }
         
     }//GEN-LAST:event_jTextFieldResultadoKeyPressed
+
+    private void jButtonAbreParentesesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAbreParentesesActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonAbreParentesesActionPerformed
+
+    private void jButtonResultado2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonResultado2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonResultado2ActionPerformed
+
+    private void jButtonFechaParentesesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonFechaParentesesActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonFechaParentesesActionPerformed
 
     /**
      * @param args the command line arguments
@@ -784,14 +854,17 @@ public class TelaCalc extends javax.swing.JFrame {
     private javax.swing.JButton jButton07;
     private javax.swing.JButton jButton08;
     private javax.swing.JButton jButton09;
+    private javax.swing.JButton jButtonAbreParenteses;
     private javax.swing.JButton jButtonApagar;
     private javax.swing.JButton jButtonClear;
     private javax.swing.JButton jButtonDiv1;
+    private javax.swing.JButton jButtonFechaParenteses;
     private javax.swing.JButton jButtonMenos;
     private javax.swing.JButton jButtonPonto;
     private javax.swing.JButton jButtonPotencia;
     private javax.swing.JButton jButtonRaiz;
     private javax.swing.JButton jButtonResultado;
+    private javax.swing.JButton jButtonResultado2;
     private javax.swing.JButton jButtonSoma;
     private javax.swing.JButton jButtonVezes;
     private javax.swing.JTextField jTextFieldResultado;
